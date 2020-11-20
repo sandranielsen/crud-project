@@ -1,4 +1,4 @@
-import firebase from 'firebase/app'
+import firebase from "firebase/app";
 import 'firebase/firestore'
 
 export const db = firebase
@@ -14,4 +14,4 @@ export const db = firebase
 
     .firestore()
 
-export const postRef = db.collection('posts')
+export const postRef = db.collection("posts")

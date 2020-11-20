@@ -1,11 +1,12 @@
 <template>
   <div class="create">
-    <h1>Create New Post Page</h1>
+    <h1>Create a New Post</h1>
     <form>
+      <input type="text" v-model="post.title" placeholder="Title" required />
       <input
         type="text"
         v-model="post.description"
-        placeholder="Type a description here"
+        placeholder="Description"
         required
       />
       <input
@@ -15,13 +16,13 @@
         v-on:change="previewImage"
       />
       <button class="choose-image" type="button" v-on:click="triggerChooseImg">
-        Choose image
+        Choose Image
       </button>
       <div>
         <img :src="post.image" class="image-preview" />
       </div>
       <button class="create-post" type="button" v-on:click="createPost">
-        Create post
+        Create Post
       </button>
     </form>
   </div>
@@ -60,17 +61,22 @@ export default {
 </script>
 
 <style>
+h1 {
+  margin-top: 2%;
+  color: black;
+}
+
 form {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 50vw;
+  margin: 2% auto;
+  width: 40vw;
 }
 
 input {
   padding: 3%;
   display: block;
-  margin: 4% 0;
+  margin: 2% 0;
 }
 
 input[type="file"] {
@@ -92,10 +98,11 @@ button {
 }
 
 .choose-image {
-  background-color: #2c3e50;
+  background-color: #abb6c8;
+  margin-top: 3%;
 }
 
 .create-post {
-  background-color: #42b983;
+  background-color: #5d7599;
 }
 </style>

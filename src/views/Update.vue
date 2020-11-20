@@ -1,5 +1,5 @@
 <template>
-  <div class="update">
+  <div class="update-page">
     <h1>Update</h1>
     <form>
       <input
@@ -58,14 +58,15 @@ export default {
 </script>
 
 <style>
-.update-button {
+button {
   padding: 3%;
-  background-color: #2c3e50;
   color: white;
-  border: none;
   cursor: pointer;
+  border: none;
   font-size: 1em;
-  width: 50vw;
-  justify-self: center;
+}
+
+.update-button {
+  background-color: #5d7599;
 }
 </style>

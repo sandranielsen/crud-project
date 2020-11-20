@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
+      <router-link to="/">Home</router-link>
       <router-link to="/create">Create</router-link>
     </div>
     <router-view />
@@ -14,7 +14,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
 #nav {
@@ -23,10 +22,17 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: black;
+  text-decoration: none;
+  font-size: 1.25em;
+  margin: 0 2vw;
+}
+
+#nav a:hover {
+  color: #5d7599;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: #5d7599;
 }
 </style>
