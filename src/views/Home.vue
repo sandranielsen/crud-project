@@ -10,7 +10,7 @@ import PostList from "../components/PostList.vue";
 export default {
   name: "Home",
   components: {
-    PostList,
-  },
+    PostList
+  }
 };
 </script>

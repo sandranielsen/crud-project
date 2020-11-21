@@ -17,17 +17,17 @@ import { postRef } from "../firebase-db";
 export default {
   data() {
     return {
-      posts: [],
+      posts: []
     };
   },
   methods: {
     deletePost(id) {
       postRef.doc(id).delete();
-    },
+    }
   },
   firestore: {
-    posts: postRef,
-  },
+    posts: postRef
+  }
 };
 </script>
 
@@ -45,11 +45,11 @@ export default {
   .grid-container article {
     text-align: center;
     padding: 3%;
+    margin: auto;
   }
 
   .grid-container img {
     width: 100%;
-    height: 50vh;
   }
 
   .grid-container h1 {
@@ -68,6 +68,12 @@ export default {
     margin: 2%;
     width: 12vw;
     border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .delete:hover {
+    background-color: black;
+    color: white;
   }
 
   .update {
@@ -77,6 +83,12 @@ export default {
     margin: 2%;
     width: 12vw;
     border: 1px solid black;
+    cursor: pointer;
+  }
+
+  .update:hover {
+    background-color: black;
+    color: white;
   }
 }
 </style>

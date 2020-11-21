@@ -35,9 +35,10 @@ export default {
   data() {
     return {
       post: {
+        title: "",
         description: "",
-        image: null,
-      },
+        image: null
+      }
     };
   },
   methods: {
@@ -47,7 +48,7 @@ export default {
     previewImage() {
       const imageFile = this.$refs.fileInput.files[0];
       const fileReader = new FileReader();
-      fileReader.onload = (event) => {
+      fileReader.onload = event => {
         this.post.image = event.target.result;
       };
       fileReader.readAsDataURL(imageFile);
@@ -55,8 +56,8 @@ export default {
     createPost() {
       postRef.add(this.post);
       this.$router.push("/");
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -77,6 +78,17 @@ input {
   padding: 3%;
   display: block;
   margin: 2% 0;
+  background-color: #dadada;
+  border: none;
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+input:focus {
+  outline: none;
 }
 
 input[type="file"] {
@@ -85,10 +97,16 @@ input[type="file"] {
 
 button {
   padding: 3%;
-  color: white;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
   cursor: pointer;
-  border: none;
   font-size: 1em;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
 }
 
 .image-preview {
@@ -98,11 +116,6 @@ button {
 }
 
 .choose-image {
-  background-color: #abb6c8;
   margin-top: 3%;
-}
-
-.create-post {
-  background-color: #5d7599;
 }
 </style>
